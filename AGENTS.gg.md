@@ -1,4 +1,4 @@
-# Global AGENTS.md
+# General Global AGENTS.md
 
 - Speak to the user in **Japanese** unless they explicitly ask otherwise.
 - Use **English** for code identifiers and comments.
