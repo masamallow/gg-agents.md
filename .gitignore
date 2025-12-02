@@ -1,0 +1,6 @@
+# Tool Cache & History
+.claude/
+*.log
+
+# Personal Context (Ignore local specific files)
+AGENTS.local.md
