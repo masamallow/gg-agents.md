@@ -4,9 +4,9 @@ Personal **G**eneral **G**lobal **AGENTS.md** ― A universal configuration prof
 
 ## Overview
 
-This repository contains my personal AGENTS.md configuration file that provides consistent guidelines and preferences for AI coding agents (like Claude Code, Cursor, Windsurf, etc.) across all my projects and tools.
+This repository contains my personal AGENTS.md configuration file ([AGENTS.gg.md](AGENTS.gg.md) in this project) that provides consistent guidelines and preferences for AI coding agents (like Claude Code, Cursor, Windsurf, etc.) across all my projects and tools.
 
-By maintaining a single, centralized AGENTS.md file, I ensure that AI assistants understand my development workflow, coding standards, and safety practices regardless of which project I'm working on.
+By maintaining a single, centralized AGENTS.gg.md file, I ensure that AI assistants understand my development workflow, coding standards, and safety practices regardless of which project I'm working on.
 
 ## Features
 
@@ -22,13 +22,13 @@ By maintaining a single, centralized AGENTS.md file, I ensure that AI assistants
 
 ## Customization
 
-Feel free to fork this repository and customize the `AGENTS.md` file to match your own preferences.
+Feel free to fork this repository and customize the `AGENTS.gg.md` file to match your own preferences.
 
 ## Structure
 
 ```
 .
-├── AGENTS.md          # Main configuration file for AI agents
+├── AGENTS.gg.md       # Main configuration file for AI agents
 ├── LICENSE            # MIT License
 └── README.md          # This file
 ```
