@@ -80,8 +80,10 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ## Related Tools
 
-This configuration works well with:
+Primarily intended for:
 - [Codex](https://openai.com/codex) - OpenAI's agent-style coding tool
+
+May be adaptable for:
 - [Claude Code](https://claude.ai/code) - Anthropic's coding-focused assistant
 - [Cursor](https://cursor.com) - AI-powered code editor
 - [Windsurf](https://windsurf.com) - AI-native IDE from Codeium
