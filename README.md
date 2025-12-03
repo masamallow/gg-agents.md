@@ -35,7 +35,7 @@ The script will:
 
 | Service | Global Instruction Path | Symlink Target |
 |---------|-------------------------|----------------|
-| [Codex](https://github.com/openai/codex/blob/main/docs/agents_md.md) | `~/.codex/AGENTS.md`    | `AGENTS.gg.md` |
+| [Codex](https://developers.openai.com/codex/guides/agents-md) | `~/.codex/AGENTS.md`    | `AGENTS.gg.md` |
 | [Claude Code](https://www.claude.com/blog/using-claude-md-files) | `~/.claude/CLAUDE.md`   | `AGENTS.gg.md` |
 
 ### Manual Setup
@@ -81,9 +81,10 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ## Related Tools
 
 This configuration works well with:
-- [Claude Code](https://claude.ai/code) - Anthropic's official CLI for Claude
-- [Cursor](https://cursor.sh/) - AI-powered code editor
-- [Windsurf](https://codeium.com/windsurf) - AI coding assistant
+- [Codex](https://openai.com/codex) - OpenAI's agent-style coding tool
+- [Claude Code](https://claude.ai/code) - Anthropic's coding-focused assistant
+- [Cursor](https://cursor.com) - AI-powered code editor
+- [Windsurf](https://windsurf.com) - AI-native IDE from Codeium
 - Other tools that support AGENTS.md or similar instruction files
 
 ---
