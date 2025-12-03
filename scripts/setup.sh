@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # setup.sh
-# Creates symlinks from AI coding agent config files to the central AGENTS.gg.md
+# Creates symlinks from AI coding agent instruction files to AGENTS.gg.md
 
 set -euo pipefail
 

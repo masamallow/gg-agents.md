@@ -1,12 +1,12 @@
 # GG AGENTS.md
 
-Personal **G**eneral **G**lobal **AGENTS.md** ― A universal configuration profile for AI coding agents.
+Personal **G**eneral **G**lobal **AGENTS.md** ― A universal agent instruction file for AI coding agents.
 
 ## Overview
 
-This repository contains my personal AGENTS.md configuration file ([AGENTS.gg.md](AGENTS.gg.md) in this project) that provides consistent guidelines and preferences for AI coding agents (like Claude Code, Cursor, Windsurf, etc.) across all my projects and tools.
+This repository provides [AGENTS.gg.md](AGENTS.gg.md), my personal agent instruction file that offers consistent guidelines and preferences for AI coding agents (like Codex, Claude Code, Cursor, Windsurf, etc.) across all my projects and tools.
 
-By maintaining a single, centralized AGENTS.gg.md file, I ensure that AI assistants understand my development workflow, coding standards, and safety practices regardless of which project I'm working on.
+By maintaining a single, centralized instruction file, I ensure that AI assistants understand my development workflow, coding standards, and safety practices regardless of which project I'm working on.
 
 ## Features
 
@@ -28,15 +28,15 @@ By maintaining a single, centralized AGENTS.gg.md file, I ensure that AI assista
 ```
 
 The script will:
-- Create symlinks from each AI agent's global config to `AGENTS.gg.md`
-- Backup any existing config files to `bak/<service>/` before overwriting
+- Create symlinks from each AI agent's global instruction file to `AGENTS.gg.md`
+- Backup any existing instruction files to `bak/<service>/` before overwriting
 
 ### Supported Services
 
-| Service | Config Path | Symlink Target |
-|---------|-------------|----------------|
-| [Codex](https://github.com/openai/codex/blob/main/docs/agents_md.md) | `~/.codex/AGENTS.md` | `AGENTS.gg.md` |
-| [Claude Code](https://www.claude.com/blog/using-claude-md-files) | `~/.claude/CLAUDE.md` | `AGENTS.gg.md` |
+| Service | Global Instruction Path | Symlink Target |
+|---------|-------------------------|----------------|
+| [Codex](https://github.com/openai/codex/blob/main/docs/agents_md.md) | `~/.codex/AGENTS.md`    | `AGENTS.gg.md` |
+| [Claude Code](https://www.claude.com/blog/using-claude-md-files) | `~/.claude/CLAUDE.md`   | `AGENTS.gg.md` |
 
 ### Manual Setup
 
@@ -58,7 +58,7 @@ Feel free to fork this repository and customize the `AGENTS.gg.md` file to match
 
 ```
 .
-├── AGENTS.gg.md       # Main configuration file for AI agents
+├── AGENTS.gg.md       # Main deliverable: agent's global instruction file (symlink source)
 ├── LICENSE            # MIT License
 ├── README.md          # This file
 ├── scripts/
@@ -83,7 +83,7 @@ This configuration works well with:
 - [Claude Code](https://claude.ai/code) - Anthropic's official CLI for Claude
 - [Cursor](https://cursor.sh/) - AI-powered code editor
 - [Windsurf](https://codeium.com/windsurf) - AI coding assistant
-- Other tools that support AGENTS.md or similar configuration files
+- Other tools that support AGENTS.md or similar instruction files
 
 ---
 
