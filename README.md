@@ -60,7 +60,11 @@ Feel free to fork this repository and customize the `AGENTS.gg.md` file to match
 .
 ├── AGENTS.gg.md       # Main configuration file for AI agents
 ├── LICENSE            # MIT License
-└── README.md          # This file
+├── README.md          # This file
+├── scripts/
+│   └── setup.sh       # Symlink setup script
+└── bak/               # Backup directory (created by setup.sh)
+    └── <service>/     # Per-service backup directories
 ```
 
 ## Contributing
