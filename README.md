@@ -59,6 +59,7 @@ Feel free to fork this repository and customize the `AGENTS.gg.md` file to match
 ```
 .
 ├── AGENTS.gg.md       # Main deliverable: agent's global instruction file (symlink source)
+├── AGENTS.md          # Repository-local agent instructions (not for distribution)
 ├── LICENSE            # MIT License
 ├── README.md          # This file
 ├── scripts/
