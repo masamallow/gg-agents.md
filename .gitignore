@@ -4,3 +4,6 @@
 
 # Personal Context (Ignore local specific files)
 AGENTS.local.md
+
+# Backup files
+/bak/
