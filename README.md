@@ -18,7 +18,37 @@ By maintaining a single, centralized AGENTS.gg.md file, I ensure that AI assista
 
 ## Usage
 
-🚧 TODO
+### Quick Setup
+
+1. Clone this repository, then `cd /path/to/gg-agents.md`
+
+2. Run the setup script:
+```bash
+./scripts/setup.sh
+```
+
+The script will:
+- Create symlinks from each AI agent's global config to `AGENTS.gg.md`
+- Backup any existing config files to `bak/<service>/` before overwriting
+
+### Supported Services
+
+| Service | Config Path | Symlink Target |
+|---------|-------------|----------------|
+| [Codex](https://github.com/openai/codex/blob/main/docs/agents_md.md) | `~/.codex/AGENTS.md` | `AGENTS.gg.md` |
+| [Claude Code](https://www.claude.com/blog/using-claude-md-files) | `~/.claude/CLAUDE.md` | `AGENTS.gg.md` |
+
+### Manual Setup
+
+If you prefer manual setup, create symlinks yourself:
+
+```bash
+# Codex
+ln -sf /path/to/gg-agents.md/AGENTS.gg.md ~/.codex/AGENTS.md
+
+# Claude Code
+ln -sf /path/to/gg-agents.md/AGENTS.gg.md ~/.claude/CLAUDE.md
+```
 
 ## Customization
 
