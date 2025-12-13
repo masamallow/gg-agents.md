@@ -28,11 +28,6 @@ jobs:
 
       - name: Setup Bats
         uses: bats-core/bats-action@3.0.0
-        with:
-          support-path: false
-          assert-path: false
-          detik-path: false
-          file-path: false
 
       - name: Run Bats Tests
         run: bats tests/
