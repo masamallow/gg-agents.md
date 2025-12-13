@@ -9,7 +9,6 @@ setup() {
 
   # Get repository root directory
   REPO_DIR="$(cd "${BATS_TEST_DIRNAME}/.." && pwd)"
-  export REPO_DIR
 
   # Create a mock AGENTS.gg.md for testing
   MOCK_AGENTS_FILE="${TEST_TEMP_DIR}/repo/AGENTS.gg.md"
@@ -49,7 +48,7 @@ teardown() {
   [ "$status" -eq 0 ]
 
   # Check Codex backup was created
-  codex_backup_count=$(find "${TEST_TEMP_DIR}/repo/bak/codex" -name "*.bak" 2>/dev/null | wc -l)
+  codex_backup_count=$(find "${TEST_TEMP_DIR}/repo/bak/codex" -name "*.bak" 2>/dev/null | wc -l | xargs)
   [ "$codex_backup_count" -ge 1 ]
 
   # Verify Codex backup content
@@ -57,7 +56,7 @@ teardown() {
   [ "$(cat "$codex_backup_file")" = "codex content" ]
 
   # Check Claude backup was created
-  claude_backup_count=$(find "${TEST_TEMP_DIR}/repo/bak/claude" -name "*.bak" 2>/dev/null | wc -l)
+  claude_backup_count=$(find "${TEST_TEMP_DIR}/repo/bak/claude" -name "*.bak" 2>/dev/null | wc -l | xargs)
   [ "$claude_backup_count" -ge 1 ]
 
   # Verify Claude backup content
