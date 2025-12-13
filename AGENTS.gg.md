@@ -29,4 +29,4 @@
 
 - For complex tasks, outline a plan first.
 - After changes, summarize what was done and verified.
-- Use Conventional Commit prefixes (feat:, fix:, chore:, docs:) for commit messages.
+- Use Conventional Commit prefixes (feat:, fix:, chore:, docs:,  build:, ci:, perf:, refactor:, style:, test:) for commit messages.
