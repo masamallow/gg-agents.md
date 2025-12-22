@@ -1,7 +1,7 @@
 # General Global AGENTS.md
 
 - Speak to the user in **Japanese** unless they explicitly ask otherwise.
-- Use **English** for code identifiers and comments.
+- Use **English** for code identifiers, comments and project documentation (only git target).
 
 ## Changes
 
