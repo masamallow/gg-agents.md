@@ -44,10 +44,10 @@ If you prefer manual setup, create symlinks yourself:
 
 ```bash
 # Codex
-ln -sf /path/to/gg-agents.md/AGENTS.gg.md ~/.codex/AGENTS.md
+ln -s /path/to/gg-agents.md/AGENTS.gg.md ~/.codex/AGENTS.md
 
 # Claude Code
-ln -sf /path/to/gg-agents.md/AGENTS.gg.md ~/.claude/CLAUDE.md
+ln -s /path/to/gg-agents.md/AGENTS.gg.md ~/.claude/CLAUDE.md
 ```
 
 ## Customization
