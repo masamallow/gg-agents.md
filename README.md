@@ -96,7 +96,6 @@ Different services label their instruction systems differently. In this reposito
 - Codex: "instructions" in `AGENTS.md`
 - Claude Code: "memory" in `CLAUDE.md`
 - GitHub Copilot: "custom instructions" / "agent instructions" via `AGENTS.md` and `.github/*`
-- ChatGPT: "Custom Instructions" (UI setting, not a file)
 
 ---
 
