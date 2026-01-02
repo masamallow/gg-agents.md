@@ -89,6 +89,15 @@ May be adaptable for:
 - [Windsurf](https://windsurf.com) - AI-native IDE from Codeium
 - Other tools that support AGENTS.md or similar instruction files
 
+## Appendix: Terminology
+
+Different services label their instruction systems differently. In this repository, "agent instruction file" refers to file-based, project- or user-scoped instructions.
+
+- Codex: "instructions" in `AGENTS.md`
+- Claude Code: "memory" in `CLAUDE.md`
+- GitHub Copilot: "custom instructions" / "agent instructions" via `AGENTS.md` and `.github/*`
+- ChatGPT: "Custom Instructions" (UI setting, not a file)
+
 ---
 
 Made with 🤖 for better AI-assisted development
