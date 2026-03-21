@@ -10,11 +10,13 @@ setup() {
   # Get repository root directory
   REPO_DIR="$(cd "${BATS_TEST_DIRNAME}/.." && pwd)"
 
-  # Create a mock AGENTS.gg.md for testing
+  # Create mock source files for testing
   MOCK_AGENTS_FILE="${TEST_TEMP_DIR}/repo/AGENTS.gg.md"
+  MOCK_CLAUDE_FILE="${TEST_TEMP_DIR}/repo/CLAUDE.gg.md"
   mkdir -p "$(dirname "${MOCK_AGENTS_FILE}")"
   echo "# Mock AGENTS.gg.md" > "${MOCK_AGENTS_FILE}"
-  export MOCK_AGENTS_FILE
+  echo "# Mock CLAUDE.gg.md" > "${MOCK_CLAUDE_FILE}"
+  export MOCK_AGENTS_FILE MOCK_CLAUDE_FILE
 
   # Copy setup.sh to temp repo
   mkdir -p "${TEST_TEMP_DIR}/repo/scripts"
@@ -82,7 +84,7 @@ teardown() {
   [[ "$codex_target" == *"AGENTS.gg.md" ]]
 
   claude_target=$(readlink "${HOME}/.claude/CLAUDE.md")
-  [[ "$claude_target" == *"AGENTS.gg.md" ]]
+  [[ "$claude_target" == *"CLAUDE.gg.md" ]]
 }
 
 @test "setup.sh replaces existing symlinks" {
