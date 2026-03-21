@@ -15,8 +15,6 @@ Global, repository-agnostic defaults. Repo-level AGENTS.md may override or exten
 - Plan before non-trivial changes; keep changes focused; update docs when behavior changes.
 
 ## Tools and stack
-- Use `mise-en-place` to manage language versions and `uv`, `Node`, `pnpm` ...
-  - `mise ls` to check details
 - JS/TS: use `pnpm` (prohibit `npm`/`yarn`). Prefer `pnpm exec` over global installs.
 - Python: use `uv` (prohibit `pip`). Prefer `uvx` for one-off commands.
 - Use existing languages/frameworks. Avoid new dependencies unless necessary.
