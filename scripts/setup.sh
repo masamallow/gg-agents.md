@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # setup.sh
-# Creates symlinks from AI coding agent instruction files to AGENTS.gg.md
+# Creates symlinks from AI coding agent instruction files to AGENTS.gg.md / CLAUDE.gg.md
 
 set -euo pipefail
 
@@ -8,20 +8,23 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_DIR="$(dirname "${SCRIPT_DIR}")"
 AGENTS_FILE="${REPO_DIR}/AGENTS.gg.md"
+CLAUDE_FILE="${REPO_DIR}/CLAUDE.gg.md"
 BACKUP_DIR="${REPO_DIR}/bak"
 TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
 
-# Service configurations: "config_dir:config_file:backup_name"
+# Service configurations: "config_dir:config_file:backup_name:source_file"
 SERVICES=(
-  "${HOME}/.codex:AGENTS.md:codex"
-  "${HOME}/.claude:CLAUDE.md:claude"
+  "${HOME}/.codex:AGENTS.md:codex:${AGENTS_FILE}"
+  "${HOME}/.claude:CLAUDE.md:claude:${CLAUDE_FILE}"
 )
 
-# Verify source file exists
-if [[ ! -f "${AGENTS_FILE}" ]]; then
-  echo "Error: AGENTS.gg.md not found at ${AGENTS_FILE}" >&2
-  exit 1
-fi
+# Verify source files exist
+for src in "${AGENTS_FILE}" "${CLAUDE_FILE}"; do
+  if [[ ! -f "${src}" ]]; then
+    echo "Error: $(basename "${src}") not found at ${src}" >&2
+    exit 1
+  fi
+done
 
 # Create backup root directory
 mkdir -p "${BACKUP_DIR}"
@@ -29,7 +32,7 @@ mkdir -p "${BACKUP_DIR}"
 created_symlinks=()
 
 for service in "${SERVICES[@]}"; do
-  IFS=':' read -r config_dir config_file backup_name <<< "${service}"
+  IFS=':' read -r config_dir config_file backup_name source_file <<< "${service}"
   target_file="${config_dir}/${config_file}"
   service_backup_dir="${BACKUP_DIR}/${backup_name}"
 
@@ -47,7 +50,7 @@ for service in "${SERVICES[@]}"; do
   fi
 
   # Create symlink (force overwrite if exists)
-  ln -sf "${AGENTS_FILE}" "${target_file}"
+  ln -sf "${source_file}" "${target_file}"
   created_symlinks+=("${target_file}")
 done
 
