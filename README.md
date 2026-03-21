@@ -4,7 +4,7 @@ Personal **G**eneral **G**lobal **AGENTS.md** ― A universal agent instruction 
 
 ## Overview
 
-This repository provides [AGENTS.gg.md](AGENTS.gg.md), my personal agent instruction file that offers consistent guidelines and preferences for AI coding agents (like Codex, Claude Code, Cursor, Windsurf, etc.) across all my projects and tools.
+This repository provides [AGENTS.gg.md](AGENTS.gg.md) and [CLAUDE.gg.md](CLAUDE.gg.md), my personal agent instruction files that offer consistent guidelines and preferences for AI coding agents (like Codex, Claude Code, Cursor, Windsurf, etc.) across all my projects and tools.
 
 By maintaining a single, centralized instruction file, I ensure that AI assistants understand my development workflow, coding standards, and safety practices regardless of which project I'm working on.
 
@@ -28,7 +28,7 @@ By maintaining a single, centralized instruction file, I ensure that AI assistan
 ```
 
 The script will:
-- Create symlinks from each AI agent's global instruction file to `AGENTS.gg.md`
+- Create symlinks from each AI agent's global instruction file to `AGENTS.gg.md` or `CLAUDE.gg.md`
 - Backup any existing instruction files to `bak/<service>/` before overwriting
 
 ### Supported Services
@@ -36,7 +36,7 @@ The script will:
 | Service | Global Instruction Path | Symlink Target |
 |---------|-------------------------|----------------|
 | [Codex](https://developers.openai.com/codex/guides/agents-md) | `~/.codex/AGENTS.md`    | `AGENTS.gg.md` |
-| [Claude Code](https://www.claude.com/blog/using-claude-md-files) | `~/.claude/CLAUDE.md`   | `AGENTS.gg.md` |
+| [Claude Code](https://www.claude.com/blog/using-claude-md-files) | `~/.claude/CLAUDE.md`   | `CLAUDE.gg.md` |
 
 ### Manual Setup
 
@@ -47,7 +47,7 @@ If you prefer manual setup, create symlinks yourself:
 ln -s /path/to/gg-agents.md/AGENTS.gg.md ~/.codex/AGENTS.md
 
 # Claude Code
-ln -s /path/to/gg-agents.md/AGENTS.gg.md ~/.claude/CLAUDE.md
+ln -s /path/to/gg-agents.md/CLAUDE.gg.md ~/.claude/CLAUDE.md
 ```
 
 ## Customization
@@ -59,6 +59,7 @@ Feel free to fork this repository and customize the `AGENTS.gg.md` file to match
 ```
 .
 ├── AGENTS.gg.md       # Main deliverable: agent's global instruction file (symlink source)
+├── CLAUDE.gg.md       # Claude Code specific global instructions (imports AGENTS.gg.md)
 ├── AGENTS.md          # Repository-local agent instructions (not for distribution)
 ├── LICENSE            # MIT License
 ├── README.md          # This file
@@ -82,9 +83,9 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 Primarily intended for:
 - [Codex](https://openai.com/codex) - OpenAI's agent-style coding tool
-
-May be adaptable for:
 - [Claude Code](https://claude.ai/code) - Anthropic's coding-focused assistant
+
+Maybe adaptable for:
 - [Cursor](https://cursor.com) - AI-powered code editor
 - [Windsurf](https://windsurf.com) - AI-native IDE from Codeium
 - Other tools that support AGENTS.md or similar instruction files
