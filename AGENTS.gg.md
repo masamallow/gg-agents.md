@@ -7,7 +7,7 @@ Global, repository-agnostic defaults. Repo-level AGENTS.md may override or exten
 - Use English for code identifiers, comments, and committed documentation.
 
 ## Operating principles
-- Small, incremental changes. Prefer reviewable diffs over large refactors.
+- Small, incremental changes. Prefer reviewable diffs to large refactors.
 - Respect the project's existing constraints, architecture, and style.
 - Optimize for correctness, maintainability, and security.
 - Never fabricate file contents, command outputs, test results, or tool results.
@@ -15,7 +15,7 @@ Global, repository-agnostic defaults. Repo-level AGENTS.md may override or exten
 - Plan before non-trivial changes; keep changes focused; update docs when behavior changes.
 
 ## Tools and stack
-- JS/TS: use `pnpm` (prohibit `npm`/`yarn`). Prefer `pnpm exec` over global installs.
+- JS/TS: use `pnpm` (prohibit `npm`/`yarn`). Prefer `pnpm exec` over global installations.
 - Python: use `uv` (prohibit `pip`). Prefer `uvx` for one-off commands.
 - Use existing languages/frameworks. Avoid new dependencies unless necessary.
 - Use the repo's existing build/test/deploy commands.
