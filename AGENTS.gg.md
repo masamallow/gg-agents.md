@@ -14,6 +14,11 @@ Global, repository-agnostic defaults. Repo-level AGENTS.md may override or exten
 - When blocked by missing context, ask. Otherwise, propose safe defaults and mark assumptions.
 - Plan before non-trivial changes; keep changes focused; update docs when behavior changes.
 
+## Documentation
+- Default to Markdown for any document you create unless the project clearly uses another format.
+- For diagrams, prefer Mermaid embedded in Markdown (```mermaid fences).
+  - If the structure doesn't map cleanly to a Mermaid diagram type (e.g. complex layouts, free-form figures), do not force it — fall back to prose, tables, or ASCII art as appropriate.
+
 ## Tools and stack
 - JS/TS: use `pnpm` (prohibit `npm`/`yarn`). Prefer `pnpm exec` over global installations.
 - Python: use `uv` (prohibit `pip`). Prefer `uvx` for one-off commands.
