@@ -1,0 +1,48 @@
+# Codex CLI global configuration
+# Reference: https://github.com/openai/codex/blob/main/docs/config.md
+#
+# Symlink target: ~/.codex/config.toml
+
+# Default model for new sessions.
+model = "gpt-5-codex"
+
+# Reasoning effort: "minimal" | "low" | "medium" | "high"
+model_reasoning_effort = "medium"
+
+# Approval policy: "untrusted" | "on-failure" | "on-request" | "never"
+approval_policy = "on-request"
+
+# Sandbox mode: "read-only" | "workspace-write" | "danger-full-access"
+sandbox_mode = "workspace-write"
+
+# Show reasoning summaries in the UI when the model emits them.
+show_raw_agent_reasoning = false
+
+# Keep `~/.codex/history.jsonl` enabled by default.
+[history]
+persistence = "save-all"
+
+[sandbox_workspace_write]
+# Network is off by default; flip per-project when truly needed.
+network_access = false
+# Extra writable roots beyond cwd and tmp (absolute paths).
+writable_roots = []
+
+# --- Profiles -----------------------------------------------------------
+# Switch with `codex --profile <name>`. Profiles override top-level keys.
+
+[profiles.readonly]
+approval_policy = "on-request"
+sandbox_mode = "read-only"
+
+[profiles.yolo]
+approval_policy = "never"
+sandbox_mode = "danger-full-access"
+
+# --- MCP servers --------------------------------------------------------
+# Uncomment and configure as needed. Each entry maps to an MCP server.
+#
+# [mcp_servers.example]
+# command = "npx"
+# args = ["-y", "@example/mcp-server"]
+# env = { "API_KEY" = "..." }

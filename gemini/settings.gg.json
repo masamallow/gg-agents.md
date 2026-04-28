@@ -1,0 +1,15 @@
+{
+  "contextFileName": "GEMINI.md",
+  "vimMode": false,
+  "autoAccept": false,
+  "checkpointing": {
+    "enabled": true
+  },
+  "fileFiltering": {
+    "respectGitIgnore": true
+  },
+  "telemetry": {
+    "enabled": false
+  },
+  "mcpServers": {}
+}
