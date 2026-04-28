@@ -7,10 +7,32 @@ Google's terminal coding agent. Resources in this repo target `~/.gemini/`.
 | Path                        | Purpose                                          | Symlinked from              |
 | --------------------------- | ------------------------------------------------ | --------------------------- |
 | `GEMINI.md`                 | Global memory / instructions                     | `gemini/GEMINI.gg.md`       |
-| `settings.json`             | User-level settings                              | `gemini/settings.gg.json`   |
+| `settings.json`             | User-level settings — see template below (not symlinked) | —                   |
 | `commands/<name>.toml`      | Custom slash commands (TOML, not Markdown)       | `gemini/commands/`          |
 | `extensions/<name>/`        | Extensions (custom tools / context)              | —                           |
 | `tmp/`, logs                | Auto-generated — do not track                    | —                           |
+
+## `settings.json` template
+
+Gemini CLI persists user choices (theme, auth, etc.) into `~/.gemini/settings.json`. Symlinking would conflict with these writes, so this repo keeps it as a copy-paste template instead.
+
+```json
+{
+  "contextFileName": "GEMINI.md",
+  "vimMode": false,
+  "autoAccept": false,
+  "checkpointing": {
+    "enabled": true
+  },
+  "fileFiltering": {
+    "respectGitIgnore": true
+  },
+  "telemetry": {
+    "enabled": false
+  },
+  "mcpServers": {}
+}
+```
 
 ## Settings precedence (high → low)
 
