@@ -21,7 +21,6 @@ Global, repository-agnostic defaults. Repo-level AGENTS.md may override or exten
 - Reserve formatting for meaning, not decoration — formatting that requires manual upkeep on content shifts (renumbering, re-bolding) is an anti-pattern.
   - Numbered headings (`### 1. xxx`): only when order is semantically meaningful (step-by-step procedures, output format specs). For tip lists, rule lists, or parallel items, use plain headings — document order already conveys structure.
   - Bold (`**...**`): reserve for content the reader must not skip (critical warnings, irreversible constraints, version conflicts that cause real bugs). Do not use for column labels, list-item labels, or general paragraph emphasis.
-  - When sequence matters in the body, prefer markdown ordered lists (`1.` `2.` `3.`) over numbered headings — markdown auto-renumbers on insertion.
 
 ## Tools and stack
 - JS/TS: use `pnpm` (prohibit `npm`/`yarn`). Prefer `pnpm exec` over global installations.
