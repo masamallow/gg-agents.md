@@ -16,9 +16,8 @@ Global, repository-agnostic defaults. Repo-level AGENTS.md may override or exten
 
 ## Documentation
 - Default to Markdown for any document you create unless the project clearly uses another format.
-- Reference repository-internal files with Markdown relative links (`[file.ext](./path/to/file.ext)`), not bare paths.
+- In prose, reference repository-internal files with Markdown relative links (`[file.ext](./path/to/file.ext)`), not bare paths.
   - Resolve the path relative to the document's location so the link is navigable on GitHub, in IDEs, and other Markdown renderers.
-  - Inline code (`` `path/to/file` ``) and fenced code blocks render literally — keep bare paths there.
 - For diagrams, prefer Mermaid embedded in Markdown (```mermaid fences).
   - If the structure doesn't map cleanly to a Mermaid diagram type (e.g. complex layouts, free-form figures), do not force it — fall back to prose, tables, or ASCII art as appropriate.
 - Reserve formatting for meaning, not decoration — formatting that requires manual upkeep on content shifts (renumbering, re-bolding) is an anti-pattern.
