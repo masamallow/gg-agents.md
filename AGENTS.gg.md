@@ -27,7 +27,6 @@ Global, repository-agnostic defaults. Repo-level AGENTS.md may override or exten
     - Do not use for column labels, list-item labels, or general paragraph emphasis.
 - Wrap source Markdown by semantic boundaries, not by a fixed column width — this keeps diffs reviewable and prevents machine translation from joining or splitting clauses across forced wraps (a.k.a. semantic line breaks; see [sembr.org](https://sembr.org/)).
   - Break the line right after every sentence-terminating `.` so each sentence sits on its own line. Do not break inside abbreviations (`e.g.`, `i.e.`, `etc.`), version numbers, file paths, or URLs.
-  - When a list item's content spans multiple lines, indent the continuation to align with the parent item's text so the list structure survives Markdown rendering.
 
 ## Tools and stack
 - JS/TS: use `pnpm` (prohibit `npm`/`yarn`). Prefer `pnpm exec` over global installations.
