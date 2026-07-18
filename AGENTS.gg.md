@@ -1,4 +1,4 @@
-# Global Agent Instructions (Codex CLI / Claude Code / Gemini CLI)
+# Global Agent Instructions (Codex / Claude Code etc.)
 
 Global, repository-agnostic defaults.
 Repo-level AGENTS.md may override or extend these.
@@ -39,7 +39,7 @@ Repo-level AGENTS.md may override or extend these.
   Prefer `uvx` for one-off commands.
 - Use existing languages/frameworks.
   Avoid new dependencies unless necessary.
-- Use the repo's existing build/test/deploy commands.
+- Use the repo's existing lint/build/test/deploy commands.
 
 ## Safety gates
 Ask for explicit approval before:
